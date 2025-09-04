@@ -1,0 +1,43 @@
+Language: cpp
+
+Difficulty: Medium
+
+Task Category: code_explanation
+
+Problem Statement: Problem: D. Misha and Apples
+
+Schoolboy Misha got tired of doing sports programming, so he decided to quit everything and go to the magical forest to sell magic apples.
+
+His friend Danya came to the magical forest to visit Misha. What was his surprise when he found out that Misha found a lot of friends there, the same former sports programmers. And all of them, like Misha, have their own shop where they sell magic apples. To support his friends, who have changed their lives so drastically, he decided to buy up their entire assortment.
+
+The buying process works as follows: in total there are n stalls, numbered with integers from 1 to n, and m kinds of magic apples, numbered with integers from 1 to m. Each shop sells some number of kinds of apples. Danya visits all the shops in order of increasing number, starting with the first one. Upon entering the shop he buys one magic apple of each kind sold in that shop and puts them in his backpack.
+
+However, magical apples wouldn't be magical if they were all right. The point is that when two apples of the same type end up together in the backpack, all of the apples in it magically disappear. Importantly, the disappearance happens after Danya has put the apples in the backpack and left the shop.
+
+Upon returning home, Danya realized that somewhere in the forest he had managed to lose his backpack. Unfortunately, for some shops Danya had forgotten what assortment of apples there was. Remembering only for some shops what kinds of magical apples were sold in them, he wants to know what is the maximum number of apples he could have in his backpack after all his purchases at best.
+
+Input
+
+The first line contains two integers n and m (1 ≤ n, m ≤ 2⋅10⁵) — the number of stalls and kinds of apples.
+
+Each of the following n lines describes the assortment of the next stall in the format described below.
+
+Each line starts with an integer kᵢ (0 ≤ kᵢ ≤ 2⋅10⁵). This is followed by kᵢ different integers aᵢⱼ (1 ≤ aᵢⱼ ≤ m) — the kinds of apples sold in the i-th stall. If kᵢ = 0, then Danya does not remember what assortment was in that shop, and the set of apple kinds can be anything (including empty).
+
+Output
+
+output will be a single integer — the maximum number of apples that could be in Danya's backpack after visiting all the shops at best.
+
+Example
+
+Input
+
+3 4 2 1 2 2 4 1 2 1 2
+
+Output
+
+2
+
+Note
+
+Danya remembers all the shops, so the process will be deterministic. He will take two apples at the first shop and two more at the second, but after he puts them in his backpack, they will disappear. So at the end there will only be 2 apples left, which he will take at the third shop.

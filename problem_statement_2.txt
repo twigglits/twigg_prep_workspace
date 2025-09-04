@@ -1,0 +1,47 @@
+Problem: D. Flower-like Pseudotree
+
+Problem.txt:
+
+A pseudotree is a connected graph which has exactly one cycle and no self-loops. Note that a pseudotree may contain multiple-edges. It can be shown that a pseudotree with n vertices always contains n edges.
+
+After deleting all edges on the cycle in the pseudotree, a forest†† will be formed. It can be shown that each tree in the forest will contain exactly one vertex which is on the cycle before removing the edges. If all trees in the forest have the same depth‡‡ when picking the vertex on cycle as root, we call the original pseudotree flower-like.
+
+Our friend sszcdjr had a flower-like pseudotree with n vertices and n edges. However, he forgot all the edges in the pseudotree. Fortunately, he still remembers the degrees of vertices. Specifically, the degree of the i-th vertex is dᵢ.
+
+You have to help sszcdjr construct a possible flower-like pseudotree with n vertices, where the degree of the i-th vertex is exactly dᵢ, or tell him that it is impossible.
+
+†† A forest is a graph in which all connectivity components are trees. A connected graph without cycles and self-loops is called a tree.
+
+‡‡ The depth of a tree with a root is the maximum distance from the root to the vertex of this tree.
+
+Function Signature
+
+Parameters: n: the number of vertices. nodes: the degree of each vertex.
+
+Input
+
+The first line contains a single integer n (2 ≤ n ≤ 10⁶) — the number of vertices.
+
+The second line contains n integers d₁, d₂, …, dₙ (1 ≤ dᵢ ≤ n) — the degree of each vertex.
+
+Output
+
+For each test case:
+
+If no valid flower-like pseudotree exists, output "No".
+
+Otherwise, output "Yes", followed by n lines, each containing two integers uᵢ and vᵢ representing an edge in the pseudotree. You may output the edges in any order.
+
+Example
+
+Input:
+
+3 2 2 2
+
+Output:
+
+Yes 1 2 2 3 3 1
+
+Explanation:
+
+In the example case, the only possible flower-like pseudotree is: 1 2 2 3 3 1
